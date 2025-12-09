@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 2: Datatypes and Operators</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+  <h2> Data Types in Java</h2>
+  <p>
+    In Java, data types specify the different sizes and values that can be stored in a variable. 
+    They are essential for defining the kind of data a variable can hold, such as numbers, characters, or text.
+  </p>
+
+  <h3>1. Types of Data Types</h3>
+  <p>
+    Java has two main categories of data types:
+  </p>
+  <ul>
+    <li><b>Primitive Data Types</b> — predefined by Java and named by a keyword.</li>
+    <li><b>Non-Primitive Data Types</b> — also known as reference types, created by the programmer.</li>
+  </ul>
+
+  <h3>2. Primitive Data Types</h3>
+  <p>There are 8 primitive data types in Java:</p>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width:100%;">
+    <tr style="background-color:#007396; color:white;">
+      <th>Data Type</th>
+      <th>Size</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+    <tr><td>byte</td><td>1 byte</td><td>0</td><td>Stores small integer values (-128 to 127)</td></tr>
+    <tr><td>short</td><td>2 bytes</td><td>0</td><td>Stores larger integers (-32,768 to 32,767)</td></tr>
+    <tr><td>int</td><td>4 bytes</td><td>0</td><td>Commonly used for whole numbers</td></tr>
+    <tr><td>long</td><td>8 bytes</td><td>0L</td><td>Used for very large integer values</td></tr>
+    <tr><td>float</td><td>4 bytes</td><td>0.0f</td><td>Used for decimal (floating-point) numbers</td></tr>
+    <tr><td>double</td><td>8 bytes</td><td>0.0d</td><td>Used for precise decimal values</td></tr>
+    <tr><td>char</td><td>2 bytes</td><td>'\\u0000'</td><td>Stores a single character</td></tr>
+    <tr><td>boolean</td><td>1 bit</td><td>false</td><td>Stores true or false values</td></tr>
+  </table>
+
+  <h3>Example: Primitive Data Types</h3>
+  <pre><code>
+// Example demonstrating primitive data types
+public class DataTypesExample {
+    public static void main(String[] args) {
+        int age = 25;
+        float height = 5.9f;
+        char grade = 'A';
+        boolean isStudent = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Student: " + isStudent);
+    }
+}
+  </code></pre>
+
+  <h3>3. Non-Primitive Data Types</h3>
+  <p>
+    Non-primitive data types are objects and can be used to call methods. 
+    They include classes, arrays, strings, and interfaces.
+  </p>
+
+  <pre><code>
+// Example of non-primitive data types
+public class NonPrimitiveExample {
+    public static void main(String[] args) {
+        String name = "Java Programming";
+        int[] numbers = {10, 20, 30};
+        System.out.println("Name: " + name);
+        System.out.println("First number: " + numbers[0]);
+    }
+}
+  </code></pre>
+
+  <p class="highlight">
+    Java is a statically typed language — every variable must be declared with a specific data type before it is used.
+  </p>
+
+  <button class="next" onclick="window.location.href='module4.html'">Next Module</button>
+
+ </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

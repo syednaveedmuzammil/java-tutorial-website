@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Learning Portal</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation frame styling */
+    .nav-frame {
+      width: 25%;
+      height: 100vh;
+      border: none;
+    }
+
+    /* Module frame styling */
+    .module-frame {
+      width: 75%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation frame (nav.html) -->
+  <iframe src="nav.html" class="nav-frame"></iframe>
+
+  <!-- Module frame (default to module1.html) -->
+  <iframe name="moduleFrame" src="module1.html" class="module-frame"></iframe>
+
+</body>
+</html>

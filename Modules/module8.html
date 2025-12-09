@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 6: Arrays</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+
+  <h2> Arrays in Java</h2>
+  <p>
+    An array is a collection of elements of the same data type stored in a continuous memory location. 
+    Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+  </p>
+
+  <h3>Declaring and Initializing Arrays</h3>
+  <p>
+    The size of an array must be defined when it is created. 
+    You can either specify the size during declaration or directly initialize it with values, 
+    which automatically determines its size.
+  </p>
+
+  <pre><code>
+// Example: Declaring and initializing arrays
+int[] numbers = new int[5];       // Declaring array with size
+int[] values = {10, 20, 30, 40};  // Initialization with values
+
+// Accessing array elements
+System.out.println(values[0]); // Output: 10
+
+// Using a loop to print all elements
+for (int i = 0; i < values.length; i++) {
+    System.out.println(values[i]);
+}
+  </code></pre>
+
+  <h3>Types of Arrays</h3>
+  <ul>
+    <li><b>Single-Dimensional Array:</b> A simple linear array that stores elements in one row.</li>
+    <li><b>Multi-Dimensional Array:</b> An array of arrays, such as a 2D matrix.</li>
+  </ul>
+
+  <pre><code>
+// Example: Two-Dimensional Array
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Accessing 2D array elements
+System.out.println(matrix[1][2]); // Output: 6
+  </code></pre>
+
+  <h3>Iterating Over Arrays</h3>
+  <p>
+    You can also use an enhanced for loop (for-each loop) to traverse arrays easily.
+  </p>
+
+  <pre><code>
+// Example: Enhanced for loop
+int[] marks = {85, 90, 75, 95};
+for (int mark : marks) {
+    System.out.println(mark);
+}
+  </code></pre>
+
+  <p class="highlight">
+    Arrays in Java are fixed in size and can hold both primitive data types and objects. 
+    Once created, their length cannot be changed.
+  </p>
+
+  <h2>7. Strings in Java</h2>
+  <p>
+    A string is a sequence of characters enclosed within double quotes. 
+    In Java, strings are objects of the <code>String</code> class located in the <code>java.lang</code> package.
+  </p>
+
+  <h3>Creating Strings</h3>
+  <p>Strings can be created in two main ways: using string literals or using the <code>new</code> keyword.</p>
+
+  <pre><code>
+// Example: Creating Strings
+String s1 = "Hello";
+String s2 = new String("Java");
+
+System.out.println(s1); // Output: Hello
+System.out.println(s2); // Output: Java
+  </code></pre>
+
+  <h3>Common String Methods</h3>
+  <p>Java provides several built-in methods to work with strings.</p>
+
+  <ul>
+    <li><b>length()</b> — returns the number of characters in the string.</li>
+    <li><b>charAt(int index)</b> — returns the character at a specific index.</li>
+    <li><b>substring()</b> — extracts a part of the string.</li>
+    <li><b>toLowerCase(), toUpperCase()</b> — converts the string to lower or upper case.</li>
+    <li><b>equals()</b> — compares two strings for equality.</li>
+    <li><b>concat()</b> — joins two strings.</li>
+  </ul>
+
+  <pre><code>
+// Example: Using String methods
+String text = "Java Programming";
+
+System.out.println(text.length());        // Output: 16
+System.out.println(text.charAt(5));       // Output: P
+System.out.println(text.substring(5, 16)); // Output: Programming
+System.out.println(text.toUpperCase());   // Output: JAVA PROGRAMMING
+  </code></pre>
+
+  <h3>String Comparison</h3>
+  <p>
+    Strings can be compared using <code>equals()</code> for content comparison and 
+    <code>==</code> for reference comparison.
+  </p>
+
+  <pre><code>
+// Example: String comparison
+String a = "Java";
+String b = "Java";
+String c = new String("Java");
+
+System.out.println(a == b);      // true (same memory reference)
+System.out.println(a == c);      // false (different object)
+System.out.println(a.equals(c)); // true (same content)
+  </code></pre>
+
+  <p class="highlight">
+    Strings in Java are immutable, meaning once created, their value cannot be changed. 
+    Any modification creates a new String object.
+  </p>
+
+  <button class="next" onclick="window.location.href='module9.html'">Next Module</button>
+
+ </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

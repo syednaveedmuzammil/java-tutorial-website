@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 9: Collection Framework</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+  <h2> Collection Framework in Java</h2>
+  <p>
+    The Collection Framework in Java provides a set of classes and interfaces that help store and manipulate groups of objects efficiently. 
+    It is located in the <code>java.util</code> package and provides ready-to-use data structures like lists, sets, queues, and maps.
+  </p>
+
+  <h3>Why Use Collections?</h3>
+  <ul>
+    <li>To store, retrieve, and manipulate groups of data easily.</li>
+    <li>To avoid using arrays with fixed sizes.</li>
+    <li>To use built-in methods for sorting, searching, and iteration.</li>
+  </ul>
+
+  <h3>Main Interfaces in the Collection Framework</h3>
+  <ul>
+    <li><b>Collection</b> — The root interface for most collection classes.</li>
+    <li><b>List</b> — Ordered collection that allows duplicate elements.</li>
+    <li><b>Set</b> — Unordered collection that does not allow duplicates.</li>
+    <li><b>Queue</b> — Follows FIFO (First In, First Out) order.</li>
+    <li><b>Map</b> — Stores key-value pairs and does not extend the Collection interface.</li>
+  </ul>
+
+  <h3>Hierarchy of the Collection Framework</h3>
+  <p>
+    <code>Iterable → Collection → List, Set, Queue</code><br>
+    <code>Map</code> is a separate interface that works independently.
+  </p>
+
+  <h3>Commonly Used Classes</h3>
+  <ul>
+    <li><b>ArrayList</b> — Dynamic array that allows random access of elements.</li>
+    <li><b>LinkedList</b> — Implements a doubly linked list; better for frequent insertions/deletions.</li>
+    <li><b>HashSet</b> — Stores unique elements and allows fast lookup using hash values.</li>
+    <li><b>TreeSet</b> — Stores unique elements in sorted order.</li>
+    <li><b>HashMap</b> — Stores data in key-value pairs for quick access.</li>
+    <li><b>LinkedHashMap</b> — Maintains insertion order for key-value pairs.</li>
+  </ul>
+
+  <h3>Example: Using ArrayList</h3>
+  <pre><code>
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Java");
+        list.add("Python");
+        list.add("C++");
+
+        System.out.println("Programming Languages:");
+        for (String lang : list) {
+            System.out.println(lang);
+        }
+    }
+}
+  </code></pre>
+
+  <h3>Example: Using HashMap</h3>
+  <pre><code>
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Cherry");
+
+        System.out.println("HashMap Elements:");
+        for (Integer key : map.keySet()) {
+            System.out.println(key + " => " + map.get(key));
+        }
+    }
+}
+  </code></pre>
+
+  <h3>Iterating Over Collections</h3>
+  <p>
+    Collections can be traversed using iterators or enhanced for loops.
+  </p>
+
+  <pre><code>
+import java.util.*;
+
+public class IterateExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(10, 20, 30);
+
+        System.out.println("Using Iterator:");
+        Iterator<Integer> it = numbers.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+
+        System.out.println("\nUsing For-Each Loop:");
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
+  </code></pre>
+
+  <p class="highlight">
+    The Collection Framework simplifies data management by providing ready-made data structures 
+    and algorithms for efficient data storage, retrieval, and manipulation.
+  </p>
+
+  <button class="next" onclick="window.location.href='module12.html'">Next Module</button>
+
+ </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

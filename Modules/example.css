@@ -1,0 +1,97 @@
+css file
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    nav a {
+      margin: 0 10px;
+    }
+
+header {
+  background-color: #007396; /* Java Blue */
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #e0f3f8; /* Soft light blue background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 115, 150, 0.1);
+}
+
+h2 {
+  color: #007396;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 15px;
+  border-left: 5px solid #007396;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007396;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f77;
+}
+
+/* Optional red accent for highlights */
+.highlight {
+  color: #e74c3c;
+  font-weight: bold;
+}

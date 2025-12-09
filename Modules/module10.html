@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 8: Exception Handling</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+  <h2> Exception Handling in Java</h2>
+  <p>
+    Exception handling in Java is a mechanism that allows developers to handle runtime errors 
+    and maintain the normal flow of the program. It helps prevent the program from terminating abruptly when an error occurs.
+  </p>
+
+  <h3>What is an Exception?</h3>
+  <p>
+    An exception is an unexpected event that occurs during the execution of a program 
+    and disrupts its normal flow. Examples include dividing a number by zero, accessing an invalid array index, 
+    or opening a file that does not exist.
+  </p>
+
+  <h3>Types of Exceptions</h3>
+  <ul>
+    <li><b>Checked Exceptions:</b> These are checked at compile-time. The program must handle them using <code>try-catch</code> or declare them using <code>throws</code>. Example: <code>IOException</code>, <code>SQLException</code>.</li>
+    <li><b>Unchecked Exceptions:</b> These occur during runtime and are not checked at compile-time. Example: <code>ArithmeticException</code>, <code>NullPointerException</code>.</li>
+    <li><b>Errors:</b> These represent serious issues that cannot be recovered from, like <code>OutOfMemoryError</code>.</li>
+  </ul>
+
+  <h3>Basic Syntax</h3>
+  <p>
+    The <code>try</code> block contains code that might throw an exception. 
+    The <code>catch</code> block handles the exception, and the <code>finally</code> block executes code that runs whether or not an exception occurs.
+  </p>
+
+  <pre><code>
+// Example: try-catch-finally
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int num = 10 / 0;  // This will throw an exception
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero!");
+        } finally {
+            System.out.println("Execution completed.");
+        }
+    }
+}
+  </code></pre>
+
+  <h3>Using Multiple Catch Blocks</h3>
+  <p>
+    You can use multiple catch blocks to handle different types of exceptions separately.
+  </p>
+
+  <pre><code>
+// Example: Multiple catch blocks
+public class MultiCatch {
+    public static void main(String[] args) {
+        try {
+            int[] arr = {1, 2, 3};
+            System.out.println(arr[5]); // ArrayIndexOutOfBoundsException
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic error occurred");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is out of range");
+        } catch (Exception e) {
+            System.out.println("An unexpected error occurred");
+        }
+    }
+}
+  </code></pre>
+
+  <h3>Throw and Throws</h3>
+  <p>
+    The <code>throw</code> keyword is used to explicitly throw an exception, 
+    while <code>throws</code> is used in a method signature to declare exceptions that may be thrown.
+  </p>
+
+  <pre><code>
+// Example: throw and throws
+class Test {
+    static void validateAge(int age) throws ArithmeticException {
+        if (age < 18)
+            throw new ArithmeticException("Not eligible to vote");
+        else
+            System.out.println("Eligible to vote");
+    }
+
+    public static void main(String[] args) {
+        try {
+            validateAge(15);
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+  </code></pre>
+
+  <h3>Finally Block</h3>
+  <p>
+    The <code>finally</code> block always executes, regardless of whether an exception occurs or not. 
+    It is typically used for cleanup operations like closing files or releasing resources.
+  </p>
+
+  <pre><code>
+// Example: finally block
+try {
+    int result = 10 / 2;
+    System.out.println("Result: " + result);
+} catch (Exception e) {
+    System.out.println("Exception caught");
+} finally {
+    System.out.println("This block always executes");
+}
+  </code></pre>
+
+  <p class="highlight">
+    Exception handling makes Java programs more reliable and prevents unexpected program termination. 
+    Always handle exceptions gracefully to maintain application stability.
+  </p>
+
+ <button class="next" onclick="window.location.href='module11.html'">Next Module</button>
+
+
+ </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

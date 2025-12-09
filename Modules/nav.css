@@ -1,0 +1,47 @@
+/* Container of the sidebar */
+.sidebar {
+  background-color: #007396; /* Deep Java Blue */
+  color: #ffffff;            /* White text */
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Sidebar title */
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 10px;
+}
+
+/* Unordered list styling */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List items */
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+/* Links inside the sidebar */
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar ul li a:hover {
+  background-color: #e0f3f8; /* Lighter blue on hover */
+  color: #007396;
+}

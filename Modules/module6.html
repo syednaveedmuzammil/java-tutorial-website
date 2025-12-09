@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Type Casting</title>
+  <link href="m1.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <h2>Type Casting in Java</h2>
+      <p>
+        <b>Type Casting</b> in Java is the process of converting one data type into another.
+        This conversion is useful when you need to store or operate on values of different types
+        in a single expression or computation.
+      </p>
+
+      <p>
+        There are two main types of type casting in Java:
+      </p>
+      <ul>
+        <li><b>Widening (Implicit) Casting</b> – automatic conversion performed by the compiler.</li>
+        <li><b>Narrowing (Explicit) Casting</b> – manual conversion performed by the programmer.</li>
+      </ul>
+
+      <h3>Type Conversion Hierarchy</h3>
+      <pre>
+byte → short → int → long → float → double
+          ↑
+         char
+      </pre>
+
+      <hr>
+
+      <h3>1. Widening (Implicit) Type Casting</h3>
+      <p>
+        Widening conversion happens automatically when a smaller data type is converted
+        into a larger data type. There is no data loss, and it is also known as
+        <b>automatic type conversion</b>.
+      </p>
+
+      <pre><code>
+// Example 1: Integer to Double
+int num = 25;
+double result = num; // Automatic conversion
+System.out.println(result); // Output: 25.0
+      </code></pre>
+
+      <pre><code>
+// Example 2: Char to Int
+char letter = 'A';
+int ascii = letter; // Automatically converts 'A' to its ASCII value
+System.out.println(ascii); // Output: 65
+      </code></pre>
+
+      <p>
+        Widening conversion is safe because Java ensures that no information is lost
+        when converting from a smaller to a larger data type.
+      </p>
+
+      <hr>
+
+      <h3>2. Narrowing (Explicit) Type Casting</h3>
+      <p>
+        Narrowing conversion happens when a larger data type is converted into a smaller data type.
+        This type of conversion <b>must be done manually</b> using parentheses, and there is a
+        possibility of data loss or precision loss.
+      </p>
+
+      <pre><code>
+// Example 1: Double to Int
+double price = 99.99;
+int finalPrice = (int) price; // Manual conversion
+System.out.println(finalPrice); // Output: 99 (fractional part lost)
+      </code></pre>
+
+      <pre><code>
+// Example 2: Long to Short
+long bigNum = 32000;
+short smallNum = (short) bigNum; // Manual conversion
+System.out.println(smallNum); // Output: 32000 (same, fits within short range)
+      </code></pre>
+
+      <pre><code>
+// Example 3: Overflow during narrowing
+long overflowNum = 130000;
+short converted = (short) overflowNum; 
+System.out.println(converted); // Output: -31072 (data overflow)
+      </code></pre>
+
+      <p class="highlight">
+        ⚠️ Be careful while performing narrowing conversions — they can lead to
+        unexpected results or data loss.
+      </p>
+
+      <hr>
+
+      <h3>3. Mixed-Type Expressions</h3>
+      <p>
+        Java automatically promotes smaller types to larger types in mathematical expressions.
+        This is part of type promotion rules in Java.
+      </p>
+
+      <pre><code>
+// Example
+int a = 10;
+float b = 5.5f;
+double result = a + b; // int promoted to float, then to double
+System.out.println(result); // Output: 15.5
+      </code></pre>
+
+      <p>
+        In the above example, <code>a</code> (int) is automatically converted to a
+        <code>float</code> before addition, and the result is stored as a
+        <code>double</code>.
+      </p>
+
+      <hr>
+
+      <h3>4. Real-World Example</h3>
+      <p>
+        Type casting is widely used when dealing with user input, files, or APIs that return generic data.
+        For example, reading a numeric value from a file or web form often comes as a <code>String</code>,
+        and you must cast it into an <code>int</code> or <code>double</code> for mathematical operations.
+      </p>
+
+      <pre><code>
+// Example: Converting String to int
+String input = "123";
+int number = Integer.parseInt(input);
+System.out.println(number + 10); // Output: 133
+      </code></pre>
+
+      <p>
+        You can also use casting in classes and inheritance when one object type is converted into another type
+        in the same hierarchy — this is called <b>reference casting</b>.
+      </p>
+
+      <pre><code>
+// Example: Upcasting and Downcasting
+class Animal {
+    void sound() { System.out.println("Animal sound"); }
+}
+
+class Dog extends Animal {
+    void sound() { System.out.println("Bark"); }
+    void wagTail() { System.out.println("Wagging tail"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog();  // Upcasting (safe)
+        a.sound();             // Output: Bark
+
+        Dog d = (Dog) a;       // Downcasting
+        d.wagTail();           // Output: Wagging tail
+    }
+}
+      </code></pre>
+
+      <p class="highlight">
+        🎯 Type casting is a powerful feature that allows Java developers to write flexible, efficient,
+        and reusable code while ensuring type safety.
+      </p>
+    <button class="next" onclick="window.location.href='module7.html'">Next Module</button>
+  </main>
+</body>
+</html>

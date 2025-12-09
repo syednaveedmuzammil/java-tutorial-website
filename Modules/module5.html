@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3: ControlStatements </title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Control Statements</h2>
+    <p>Control flow refers to the order in which statements within a program execute. While programs typically follow a sequential flow from top to bottom, there are scenarios where we need more flexibility. This article provides a clear understanding about everything you need to know about Control Flow Statements.</p>
+    <p><b>Types of Control Statements</b></p>
+    <img src="ControlStatements.png" alt="ControlStatements picture" class="images"><br>
+  <h3>1. Selection Statements</h3>
+<p>
+  Selection statements allow a program to make decisions and execute certain parts of code based on conditions. 
+  They help control the flow of execution.
+</p>
+<ul>
+  <li><b>if statement:</b> Executes a block of code only if a specified condition is true.</li>
+  <li><b>if-else statement:</b> Executes one block of code if the condition is true, and another block if it’s false.</li>
+  <li><b>nested if statement:</b> An if statement inside another if, used for multiple conditions.</li>
+  <li><b>switch statement:</b> Allows you to choose between multiple options based on the value of a variable.</li>
+</ul>
+
+<pre><code>
+// Example: if-else statement
+int num = 10;
+
+if(num > 0) {
+    System.out.println("Positive number");   // Executes if the condition is true
+} else {
+    System.out.println("Non-positive number"); // Executes if the condition is false
+}
+</code></pre>
+
+<p>
+  🔹 In the example above, the program checks if <code>num</code> is greater than 0.  
+  If true, it prints "Positive number"; otherwise, it prints "Non-positive number".
+</p>
+
+
+
+<h3>2. Iteration Statements (Loops)</h3>
+<p>
+  Iteration statements (also called loops) are used to execute a block of code repeatedly 
+  as long as a given condition is true.
+</p>
+<ul>
+  <li><b>for loop:</b> Used when you know in advance how many times you want to execute a block of code.</li>
+  <li><b>while loop:</b> Executes a block of code repeatedly as long as the condition is true.</li>
+  <li><b>do-while loop:</b> Similar to while loop, but executes the block at least once before checking the condition.</li>
+  <li><b>for-each loop:</b> Used to iterate over arrays or collections easily.</li>
+</ul>
+
+<pre><code>
+// Example: for loop
+for(int i = 1; i <= 5; i++) {
+    System.out.println("Java Loop: " + i); // Prints 1 to 5
+}
+</code></pre>
+
+<p>
+  🔹 Here, the <code>for</code> loop runs 5 times.  
+  The variable <code>i</code> starts from 1 and increases until it reaches 5, printing each value.
+</p>
+
+
+<h3>3. Jump Statements</h3>
+<p>
+  Jump statements are used to transfer control to another part of the program.  
+  They help manage how and when loops or methods terminate or skip iterations.
+</p>
+<ul>
+  <li><b>break:</b> Immediately exits from the current loop or switch statement.</li>
+  <li><b>continue:</b> Skips the current iteration and moves to the next iteration of the loop.</li>
+  <li><b>return:</b> Exits from the current method and optionally returns a value.</li>
+</ul>
+
+<pre><code>
+// Example: break and continue
+for(int i = 1; i <= 5; i++) {
+    if(i == 3)
+        continue; // skips iteration when i = 3
+    if(i == 5)
+        break; // exits the loop when i = 5
+    System.out.println(i);
+}
+</code></pre>
+
+<p>
+  🔹 This program prints:
+  <br>1<br>2<br>4  
+  because when <code>i</code> is 3, <code>continue</code> skips printing, and when <code>i</code> is 5, 
+  <code>break</code> exits the loop.
+</p>
+
+<p class="highlight">
+  Remember: Control statements help manage how your Java program executes step by step — 
+  deciding what runs, how many times, and when to stop.
+</p>
+<button class="next" onclick="window.location.href='module6.html'">Next Module</button>
+
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

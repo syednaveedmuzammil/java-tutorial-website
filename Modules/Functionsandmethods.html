@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 1: Java Basics</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="m1.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <h3>4. Functions / Methods in Java</h3>
+<p>
+  In Java, a <strong>method</strong> is a block of code written inside a class, which performs a specific task.  
+  Every method must belong to a class (i.e. you can’t have stand-alone functions).  
+  Methods let you reuse logic, structure your code, and make it more readable.
+</p>
+
+<h4>Parts of a Method</h4>
+<ul>
+  <li><b>Modifier / Access Specifier</b>: e.g. <code>public</code>, <code>private</code>, etc.</li>
+  <li><b>Return Type</b>: the type of value the method returns, or <code>void</code> if it returns nothing.</li>
+  <li><b>Method Name</b>: follows naming rules (lowercase, camelCase, etc.).</li>
+  <li><b>Parameters</b>: optional inputs the method accepts (e.g. <code>(int a, int b)</code>).</li>
+  <li><b>Method Body</b>: the statements inside { … } that specify what the method does.</li>
+</ul>
+
+<pre><code>
+// Example: defining & calling a method
+public class Example {
+    public static int add(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int result = add(5, 7);  // calling the method
+        System.out.println("Sum = " + result);
+    }
+}
+</code></pre>
+
+<p>
+  🔹 Here:<br>
+  • <code>public static</code> is the modifier (static means we don’t need an object).<br>
+  • <code>int</code> is the return type.<br>
+  • <code>add</code> is the method name.<br>
+  • <code>(int a, int b)</code> are parameters.<br>
+  • Inside the method, we compute and return <code>a + b</code>.<br>
+  • In <code>main</code>, we call the method and print the result.
+</p>
+
+<h4>Static vs Instance Methods</h4>
+<ul>
+  <li><b>Static method</b>: belongs to the class itself. You can call it without creating an object. :contentReference[oaicite:5]{index=5}</li>
+  <li><b>Instance method</b>: belongs to an object. You must first create an instance of the class to call it. :contentReference[oaicite:6]{index=6}</li>
+</ul>
+
+<pre><code>
+// Example: instance method
+public class Person {
+    public void sayHello() {
+        System.out.println("Hello!");
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person();   // create object
+        p.sayHello();               // call instance method
+    }
+}
+</code></pre>
+
+<h4>Method Overloading</h4>
+<p>
+  You can define multiple methods with the same name in the same class, as long as their parameter lists differ — this is called <strong>method overloading</strong>.  
+  It is a form of compile-time polymorphism (static binding) :contentReference[oaicite:7]{index=7}
+</p>
+
+<pre><code>
+// Example: method overloading
+public class Calculator {
+    public int add(int x, int y) {
+        return x + y;
+    }
+    public double add(double x, double y) {
+        return x + y;
+    }
+    public int add(int x, int y, int z) {
+        return x + y + z;
+    }
+}
+</code></pre>
+
+<p class="highlight">
+  💡 Methods are fundamental in Java: they let you compartmentalize functionality, reuse code, and call behavior in a controlled manner.
+</p>
+
+<a href="classes.html" class="btn">Next: Learn About Classes & Objects</a>
+ </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

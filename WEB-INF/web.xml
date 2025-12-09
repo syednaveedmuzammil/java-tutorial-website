@@ -1,0 +1,65 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.tutorial.util.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Signup Servlet -->
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>com.tutorial.util.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/SignupServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Exam Servlet -->
+    <servlet>
+        <servlet-name>ExamServlet</servlet-name>
+        <servlet-class>com.tutorial.util.ExamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExamServlet</servlet-name>
+        <url-pattern>/ExamServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.tutorial.util.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- Optional: Add DB connection check servlet if you have one -->
+    <!--
+    <servlet>
+        <servlet-name>DBTestServlet</servlet-name>
+        <servlet-class>com.tutorial.util.DBTestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DBTestServlet</servlet-name>
+        <url-pattern>/DBTestServlet</url-pattern>
+    </servlet-mapping>
+    -->
+
+    <!-- Default landing page -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

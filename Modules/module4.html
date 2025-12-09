@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Operators</title>
+  <link href="m1.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="java.png" alt="Java Logo">
+        <h1>Java Tutorial</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <h2>Java Operators</h2>
+      <p>
+        In Java, <b>operators</b> are special symbols used to perform specific operations on one, two, or more operands. 
+        They help manipulate data and variables during program execution.
+      </p>
+
+      <h3>1. Arithmetic Operators</h3>
+      <p>Used to perform basic mathematical operations.</p>
+      <pre><code>
+int a = 10, b = 5;
+System.out.println(a + b); // 15
+System.out.println(a - b); // 5
+System.out.println(a * b); // 50
+System.out.println(a / b); // 2
+System.out.println(a % b); // 0
+      </code></pre>
+
+      <h3>2. Relational Operators</h3>
+      <p>Used to compare two values and return true or false.</p>
+      <pre><code>
+int x = 10, y = 20;
+System.out.println(x == y); // false
+System.out.println(x != y); // true
+System.out.println(x < y);  // true
+      </code></pre>
+
+      <h3>3. Logical Operators</h3>
+      <p>Used for combining multiple conditions.</p>
+      <pre><code>
+int marks = 85;
+System.out.println(marks > 50 && marks < 100); // true
+System.out.println(marks > 90 || marks == 85); // true
+System.out.println(!(marks < 50)); // true
+      </code></pre>
+
+      <h3>4. Assignment Operators</h3>
+      <p>Used to assign values to variables.</p>
+      <pre><code>
+int num = 10;
+num += 5;  // num = 15
+num *= 2;  // num = 30
+      </code></pre>
+
+      <h3>5. Ternary Operator</h3>
+      <p>Short way of writing an if-else statement.</p>
+      <pre><code>
+int age = 18;
+String result = (age >= 18) ? "Adult" : "Minor";
+System.out.println(result);
+      </code></pre>
+
+      <p class="highlight">
+        Understanding operators helps you write efficient and expressive Java code!
+      </p>
+      <button class="next" onclick="window.location.href='module5.html'">Next Module</button>
+  </main>
+</body>
+</html>

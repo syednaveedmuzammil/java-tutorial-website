@@ -1,0 +1,175 @@
+/* module.css - refined and responsive */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  background-color: #007396;
+  color: #ffffff;
+  padding: 18px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #cce7ff;
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #e0f3f8;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 115, 150, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+h2 {
+  color: #007396;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Code or Highlight Sections */
+pre {
+  background: #f4f4f4;
+  padding: 12px;
+  border-left: 5px solid #007396;
+  overflow-x: auto;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #007396;
+  color: white;
+  padding: 10px 22px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005f77;
+  transform: translateY(-2px);
+}
+
+.next {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto 0;
+  transition: all 0.3s ease;
+}
+
+.next:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* Image Section */
+.images {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.images img {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.08);
+}
+
+/* Highlight Text */
+.highlight {
+  color: #0077cc;
+  font-weight: bold;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  main {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .next {
+    width: 100%;
+  }
+}
